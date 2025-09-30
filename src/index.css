@@ -17,17 +17,17 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 210 20% 20%;
 
-    /* Turquoise/Cyaan als hoofdkleur */
-    --primary: 187 100% 42%;
+    /* Cyaan/turquoise van logo */
+    --primary: 195 100% 50%;
     --primary-foreground: 0 0% 100%;
 
-    /* Groen voor nieuws */
-    --secondary: 142 76% 45%;
+    /* Donkergrijze/zwarte toon van logo */
+    --secondary: 0 0% 15%;
     --secondary-foreground: 0 0% 100%;
 
-    /* Blauw voor aanmelden */
-    --accent: 207 90% 54%;
-    --accent-foreground: 0 0% 100%;
+    /* Lichtere cyaan variant */
+    --accent: 195 85% 65%;
+    --accent-foreground: 0 0% 10%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 56.9%;
@@ -37,7 +37,7 @@ All colors MUST be HSL.
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 187 100% 42%;
+    --ring: 195 100% 50%;
 
     --radius: 0.75rem;
 
@@ -68,14 +68,14 @@ All colors MUST be HSL.
     --popover: 210 25% 15%;
     --popover-foreground: 210 20% 98%;
 
-    --primary: 187 100% 42%;
+    --primary: 195 100% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 142 76% 45%;
+    --secondary: 0 0% 20%;
     --secondary-foreground: 0 0% 100%;
 
-    --accent: 207 90% 54%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 195 85% 65%;
+    --accent-foreground: 0 0% 10%;
 
     --muted: 217.2 32.6% 20%;
     --muted-foreground: 215 20.2% 65.1%;
@@ -85,7 +85,7 @@ All colors MUST be HSL.
 
     --border: 217.2 32.6% 25%;
     --input: 217.2 32.6% 25%;
-    --ring: 187 100% 42%;
+    --ring: 195 100% 50%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
