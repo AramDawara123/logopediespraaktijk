@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import heroBackground from "@/assets/hero-background.jpg";
 
 export const Hero = () => {
   const benefits = [
@@ -10,8 +11,18 @@ export const Hero = () => {
   ];
 
   return (
-    <section className="relative bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 overflow-hidden">
-      {/* Animated Background Pattern */}
+    <section className="relative overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${heroBackground})`,
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/90 to-background/70" />
+      </div>
+
+      {/* Animated Pattern Overlay */}
       <div 
         className="absolute inset-0 opacity-5"
         style={{
