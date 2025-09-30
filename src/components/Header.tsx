@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 import teamPhoto from "@/assets/team-photo.jpg";
@@ -18,11 +18,33 @@ export const Header = () => {
   ];
 
   return (
-    <header className="bg-card border-b sticky top-0 z-50 shadow-sm">
+    <header className="bg-card border-b sticky top-0 z-50 shadow-lg backdrop-blur-sm bg-card/95">
+      {/* Top Bar */}
+      <div className="border-b border-border/50">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between py-2 text-sm">
+            <div className="flex items-center gap-4">
+              <a href="tel:073-6213377" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                <Phone className="h-4 w-4" />
+                <span className="hidden sm:inline">073-6213377</span>
+              </a>
+              <a href="mailto:info@spraaktijk.nl" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                <Mail className="h-4 w-4" />
+                <span className="hidden sm:inline">info@spraaktijk.nl</span>
+              </a>
+            </div>
+            <div className="text-muted-foreground text-xs">
+              Geregistreerd bij Kwaliteitsregister Paramedici
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Header */}
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center transition-transform hover:scale-105 duration-300">
             <img src={logo} alt="Logopedie Spraaktijk" className="h-16 md:h-20" />
           </Link>
 
@@ -31,26 +53,29 @@ export const Header = () => {
             <img 
               src={teamPhoto} 
               alt="Behandelteam Spraaktijk" 
-              className="h-24 w-auto rounded-lg object-cover"
+              className="h-24 w-auto rounded-lg object-cover shadow-md transition-transform hover:scale-105 duration-300"
             />
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+                className="px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-md transition-all duration-200"
               >
                 {item.label}
               </a>
             ))}
+            <Button asChild size="sm" className="ml-2">
+              <a href="#contact">Aanmelden</a>
+            </Button>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 hover:bg-primary/10 rounded-md transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -64,17 +89,20 @@ export const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden pb-4 space-y-3">
+          <nav className="md:hidden pb-4 space-y-2 animate-fade-in">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="block text-sm font-medium text-foreground hover:text-primary transition-colors py-2"
+                className="block text-sm font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-md transition-all py-3 px-3"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
               </a>
             ))}
+            <Button asChild className="w-full mt-2">
+              <a href="#contact" onClick={() => setIsMenuOpen(false)}>Aanmelden</a>
+            </Button>
           </nav>
         )}
       </div>
