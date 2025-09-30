@@ -19,7 +19,7 @@ export const Hero = () => {
           backgroundImage: `url(${heroBackground})`,
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/90 to-background/70" />
+        <div className="absolute inset-0 bg-background/40" />
       </div>
 
       {/* Animated Pattern Overlay */}
