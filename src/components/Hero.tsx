@@ -1,52 +1,79 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 export const Hero = () => {
+  const benefits = [
+    "Direct toegankelijk zonder verwijzing",
+    "6 gespecialiseerde logopedisten",
+    "Voor kinderen én volwassenen",
+    "Geregistreerd bij Kwaliteitsregister",
+  ];
+
   return (
-    <section className="relative bg-primary/5 overflow-hidden">
-      {/* Turquoise Pattern Background */}
+    <section className="relative bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 overflow-hidden">
+      {/* Animated Background Pattern */}
       <div 
-        className="absolute inset-0 opacity-10"
+        className="absolute inset-0 opacity-5"
         style={{
           backgroundImage: `repeating-linear-gradient(
             45deg,
             hsl(var(--primary)) 0px,
             hsl(var(--primary)) 2px,
             transparent 2px,
-            transparent 10px
+            transparent 12px
           )`,
         }}
       />
       
-      <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
-        <div className="max-w-4xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-            Welkom bij Logopedie Spraaktijk
+      <div className="container mx-auto px-4 py-20 md:py-32 relative z-10">
+        <div className="max-w-4xl animate-fade-in">
+          <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-sm mb-6 animate-scale-in">
+            ✨ Al 20+ jaar de specialist in logopedie
+          </div>
+          
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
+            Professionele Logopedie in{" "}
+            <span className="text-primary">'s-Hertogenbosch</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-            Logopedisten behandelen stoornissen op het gebied van de persoonlijke communicatie 
-            en houden zich bezig met voorlichting, preventie en onderzoek. U kunt bij Logopedie 
-            Spraaktijk terecht als u of uw kind een hulpvraag heeft op het gebied van adem, stem, 
-            spraak, taal, eten en drinken, afwijkend mondgedrag, gehoor en/of aangezicht.
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
+            Hoogwaardige logopedische zorg voor mensen van alle leeftijden. Van spraak- en 
+            taalproblemen tot stem- en slikstoornissen.
           </p>
+
+          {/* Benefits List */}
+          <div className="grid sm:grid-cols-2 gap-4 mb-10">
+            {benefits.map((benefit, index) => (
+              <div 
+                key={index}
+                className="flex items-center gap-3 animate-fade-in-left"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0" />
+                <span className="text-foreground font-medium">{benefit}</span>
+              </div>
+            ))}
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <Button 
               asChild
               size="lg"
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-6"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all group"
             >
-              <a href="#aanmelden">AANMELDEN</a>
+              <a href="#contact" className="flex items-center gap-2">
+                Maak een afspraak
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
             
             <Button 
               asChild
               size="lg"
-              variant="default"
-              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold text-lg px-8 py-6"
+              variant="outline"
+              className="border-2 font-semibold text-lg px-8 py-6 hover:bg-primary/5"
             >
-              <a href="#nieuws">NIEUWS</a>
+              <a href="#diensten">Bekijk diensten</a>
             </Button>
           </div>
 
