@@ -44,12 +44,66 @@ export const Footer = () => {
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-12">
           {/* Brand Section */}
-          <div className="lg:col-span-4 space-y-6">
+          <div className="lg:col-span-3 space-y-6">
             <img src={logo} alt="Logopedie Spraaktijk" className="h-16 bg-white rounded-lg p-2" />
             <p className="text-sm text-secondary-foreground/80 leading-relaxed">
               Professionele logopedische behandeling voor kinderen en volwassenen in 's-Hertogenbosch. 
               Geregistreerd bij het Kwaliteitsregister Paramedici.
             </p>
+          </div>
+
+          {/* Quick Links */}
+          <div className="lg:col-span-2">
+            <h3 className="font-semibold text-secondary-foreground mb-6 text-lg">Navigatie</h3>
+            <ul className="space-y-3">
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <Link 
+                    to={link.path} 
+                    className="text-sm text-secondary-foreground/80 hover:text-primary transition-colors inline-flex items-center gap-2 group"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary/50 group-hover:bg-primary transition-colors"></span>
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Locations */}
+          <div className="lg:col-span-4">
+            <h3 className="font-semibold text-secondary-foreground mb-6 text-lg">Onze Locaties</h3>
+            <div className="grid grid-cols-1 gap-6">
+              {locations.map((location, index) => (
+                <div 
+                  key={index} 
+                  className="space-y-2 p-4 rounded-lg bg-secondary-foreground/5 hover:bg-secondary-foreground/10 transition-colors"
+                >
+                  <h4 className="font-medium text-secondary-foreground text-sm">{location.name}</h4>
+                  <div className="space-y-1.5 text-xs text-secondary-foreground/70">
+                    <div className="flex items-start gap-2">
+                      <MapPin className="h-3.5 w-3.5 mt-0.5 flex-shrink-0 text-primary" />
+                      <div className="leading-relaxed">
+                        <p>{location.address}</p>
+                        <p>{location.postal}</p>
+                      </div>
+                    </div>
+                    <a 
+                      href={`tel:${location.phone.replace(/[\s-]/g, '')}`} 
+                      className="flex items-center gap-2 hover:text-primary transition-colors"
+                    >
+                      <Phone className="h-3.5 w-3.5 text-primary" />
+                      {location.phone}
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Contact Information */}
+          <div className="lg:col-span-3">
+            <h3 className="font-semibold text-secondary-foreground mb-6 text-lg">Contact</h3>
             <div className="space-y-3">
               <a 
                 href="mailto:info@logopediedenbosch.nl" 
@@ -79,55 +133,6 @@ export const Footer = () => {
                   <p>08:30 - 17:00</p>
                 </div>
               </div>
-            </div>
-          </div>
-
-          {/* Quick Links */}
-          <div className="lg:col-span-2">
-            <h3 className="font-semibold text-secondary-foreground mb-6 text-lg">Navigatie</h3>
-            <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <Link 
-                    to={link.path} 
-                    className="text-sm text-secondary-foreground/80 hover:text-primary transition-colors inline-flex items-center gap-2 group"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary/50 group-hover:bg-primary transition-colors"></span>
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Locations */}
-          <div className="lg:col-span-6">
-            <h3 className="font-semibold text-secondary-foreground mb-6 text-lg">Onze Locaties</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {locations.map((location, index) => (
-                <div 
-                  key={index} 
-                  className="space-y-2 p-4 rounded-lg bg-secondary-foreground/5 hover:bg-secondary-foreground/10 transition-colors"
-                >
-                  <h4 className="font-medium text-secondary-foreground text-sm">{location.name}</h4>
-                  <div className="space-y-1.5 text-xs text-secondary-foreground/70">
-                    <div className="flex items-start gap-2">
-                      <MapPin className="h-3.5 w-3.5 mt-0.5 flex-shrink-0 text-primary" />
-                      <div className="leading-relaxed">
-                        <p>{location.address}</p>
-                        <p>{location.postal}</p>
-                      </div>
-                    </div>
-                    <a 
-                      href={`tel:${location.phone.replace(/[\s-]/g, '')}`} 
-                      className="flex items-center gap-2 hover:text-primary transition-colors"
-                    >
-                      <Phone className="h-3.5 w-3.5 text-primary" />
-                      {location.phone}
-                    </a>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </div>
