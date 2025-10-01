@@ -1,6 +1,6 @@
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/logo.png";
 
 export const Footer = () => {
   const locations = [
@@ -45,7 +45,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-12">
           {/* Brand Section */}
           <div className="lg:col-span-4 space-y-6">
-            <img src={logo} alt="Logopedie Spraaktijk" className="h-16 brightness-0 invert" />
+            <img src={logo} alt="Logopedie Spraaktijk" className="h-16 bg-white rounded-lg p-2" />
             <p className="text-sm text-secondary-foreground/80 leading-relaxed">
               Professionele logopedische behandeling voor kinderen en volwassenen in 's-Hertogenbosch. 
               Geregistreerd bij het Kwaliteitsregister Paramedici.
