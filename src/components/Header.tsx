@@ -10,6 +10,10 @@ export const Header = () => {
     label: "Over Ons",
     href: "#over-ons"
   }, {
+    label: "Behandelteam",
+    href: "/behandelteam",
+    isRoute: true
+  }, {
     label: "Kinderen",
     href: "#kinderen"
   }, {
