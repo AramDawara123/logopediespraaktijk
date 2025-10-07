@@ -65,22 +65,22 @@ export const Testimonials = () => {
         </div>
 
         {/* Trust Badges */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center opacity-60">
+        <div className="mt-12 sm:mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 items-center justify-items-center opacity-60">
           <div className="text-center">
-            <div className="text-2xl font-bold text-foreground mb-1">NVLF</div>
-            <div className="text-xs text-muted-foreground">Geregistreerd</div>
+            <div className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-1">NVLF</div>
+            <div className="text-[10px] sm:text-xs text-muted-foreground">Geregistreerd</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-foreground mb-1">Kwaliteitsregister</div>
-            <div className="text-xs text-muted-foreground">Paramedici</div>
+            <div className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-1">Kwaliteitsregister</div>
+            <div className="text-[10px] sm:text-xs text-muted-foreground">Paramedici</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-foreground mb-1">BIG</div>
-            <div className="text-xs text-muted-foreground">Geregistreerd</div>
+            <div className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-1">BIG</div>
+            <div className="text-[10px] sm:text-xs text-muted-foreground">Geregistreerd</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-foreground mb-1">ISO</div>
-            <div className="text-xs text-muted-foreground">Gecertificeerd</div>
+            <div className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-1">ISO</div>
+            <div className="text-[10px] sm:text-xs text-muted-foreground">Gecertificeerd</div>
           </div>
         </div>
       </div>
