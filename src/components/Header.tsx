@@ -68,7 +68,7 @@ export const Header = () => {
           
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-1">
             {navItems.map(item => item.isRoute ? (
               <Link key={item.label} to={item.href} className="px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-md transition-all duration-200">
                 {item.label}
@@ -81,13 +81,13 @@ export const Header = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden p-2 hover:bg-primary/10 rounded-md transition-colors" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu">
+          <button className="lg:hidden p-2 hover:bg-primary/10 rounded-md transition-colors" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu">
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && <nav className="md:hidden pb-4 space-y-2 animate-fade-in">
+        {isMenuOpen && <nav className="lg:hidden pb-4 space-y-2 animate-fade-in">
             {navItems.map(item => item.isRoute ? (
               <Link key={item.label} to={item.href} className="block text-sm font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-md transition-all py-3 px-3" onClick={() => setIsMenuOpen(false)}>
                 {item.label}
