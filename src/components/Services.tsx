@@ -38,18 +38,18 @@ export const Services = () => {
   ];
 
   return (
-    <section className="py-20 bg-background" id="diensten">
+    <section className="py-12 sm:py-16 md:py-20 bg-background" id="diensten">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+        <div className="text-center mb-10 sm:mb-12 md:mb-16 animate-fade-in">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3 sm:mb-4">
             Onze Diensten
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
             Professionele logopedische zorg voor alle leeftijden en stoornissen
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-10 sm:mb-12 md:mb-16">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
@@ -75,31 +75,31 @@ export const Services = () => {
         </div>
 
         {/* Image Section */}
-        <div className="grid md:grid-cols-2 gap-8 mt-16">
-          <div className="relative overflow-hidden rounded-2xl shadow-2xl group animate-fade-in-left">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mt-10 sm:mt-12 md:mt-16">
+          <div className="relative overflow-hidden rounded-xl sm:rounded-2xl shadow-2xl group animate-fade-in-left">
             <img 
               src={childTherapy} 
               alt="Logopedie voor kinderen" 
-              className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-[250px] sm:h-[300px] md:h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-8">
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-4 sm:p-6 md:p-8">
               <div className="text-white">
-                <h3 className="text-2xl font-bold mb-2">Logopedie voor Kinderen</h3>
-                <p className="text-white/90">Speelse en effectieve behandeling in een veilige omgeving</p>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-1 sm:mb-2">Logopedie voor Kinderen</h3>
+                <p className="text-white/90 text-sm sm:text-base">Speelse en effectieve behandeling in een veilige omgeving</p>
               </div>
             </div>
           </div>
 
-          <div className="relative overflow-hidden rounded-2xl shadow-2xl group animate-fade-in-right">
+          <div className="relative overflow-hidden rounded-xl sm:rounded-2xl shadow-2xl group animate-fade-in-right">
             <img 
               src={adultTherapy} 
               alt="Logopedie voor volwassenen" 
-              className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-[250px] sm:h-[300px] md:h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent flex items-end p-8">
+            <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent flex items-end p-4 sm:p-6 md:p-8">
               <div className="text-white">
-                <h3 className="text-2xl font-bold mb-2">Logopedie voor Volwassenen</h3>
-                <p className="text-white/90">Professionele begeleiding bij stem-, spraak- en taalklachten</p>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-1 sm:mb-2">Logopedie voor Volwassenen</h3>
+                <p className="text-white/90 text-sm sm:text-base">Professionele begeleiding bij stem-, spraak- en taalklachten</p>
               </div>
             </div>
           </div>

@@ -38,18 +38,18 @@ export const Header = () => {
       {/* Top Bar */}
       <div className="border-b border-border/50">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between py-2 text-sm">
-            <div className="flex items-center gap-4">
-              <a href="tel:073-6213377" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
-                <Phone className="h-4 w-4" />
-                <span className="hidden sm:inline">073-6213377</span>
+          <div className="flex items-center justify-between py-2 text-xs sm:text-sm">
+            <div className="flex items-center gap-2 sm:gap-4">
+              <a href="tel:073-6213377" className="flex items-center gap-1 sm:gap-2 text-muted-foreground hover:text-primary transition-colors">
+                <Phone className="h-3 w-3 sm:h-4 sm:w-4" />
+                <span className="hidden xs:inline">073-6213377</span>
               </a>
-              <a href="mailto:info@spraaktijk.nl" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
-                <Mail className="h-4 w-4" />
-                <span className="hidden sm:inline">info@spraaktijk.nl</span>
+              <a href="mailto:info@spraaktijk.nl" className="flex items-center gap-1 sm:gap-2 text-muted-foreground hover:text-primary transition-colors">
+                <Mail className="h-3 w-3 sm:h-4 sm:w-4" />
+                <span className="hidden xs:inline">info@spraaktijk.nl</span>
               </a>
             </div>
-            <div className="text-muted-foreground text-xs">
+            <div className="text-muted-foreground text-[10px] xs:text-xs hidden sm:block">
               Geregistreerd bij Kwaliteitsregister Paramedici
             </div>
           </div>
@@ -61,7 +61,7 @@ export const Header = () => {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center transition-transform hover:scale-105 duration-300">
-            <img src={logo} alt="Logopedie Spraaktijk" className="h-16 md:h-20" />
+            <img src={logo} alt="Logopedie Spraaktijk" className="h-12 sm:h-16 md:h-20" />
           </Link>
 
           {/* Team Photo - Hidden on mobile */}

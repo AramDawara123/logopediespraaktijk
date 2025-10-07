@@ -22,39 +22,39 @@ export const Hero = () => {
           )`
     }} />
       
-      <div className="container mx-auto px-4 py-20 md:py-32 relative z-10">
+      <div className="container mx-auto px-4 py-12 sm:py-16 md:py-24 lg:py-32 relative z-10">
         <div className="max-w-4xl animate-fade-in">
           
           
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-4 sm:mb-6 leading-tight">
             Professionele Logopedie in{" "}
             <span className="text-primary">'s-Hertogenbosch</span>
           </h1>
           
-          <p className="text-xl md:text-2xl mb-8 leading-relaxed text-black">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 leading-relaxed text-black">
             Hoogwaardige logopedische zorg voor mensen van alle leeftijden. Van spraak- en 
             taalproblemen tot stem- en slikstoornissen.
           </p>
 
           {/* Benefits List */}
-          <div className="grid sm:grid-cols-2 gap-4 mb-10">
-            {benefits.map((benefit, index) => <div key={index} className="flex items-center gap-3 animate-fade-in-left" style={{
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-8 sm:mb-10">
+            {benefits.map((benefit, index) => <div key={index} className="flex items-center gap-2 sm:gap-3 animate-fade-in-left" style={{
             animationDelay: `${index * 100}ms`
           }}>
-                <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0" />
-                <span className="text-foreground font-medium">{benefit}</span>
+                <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0" />
+                <span className="text-foreground font-medium text-sm sm:text-base">{benefit}</span>
               </div>)}
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-8">
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all group">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 shadow-lg hover:shadow-xl transition-all group">
               <a href="#contact" className="flex items-center gap-2">
                 Maak een afspraak
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
             
-            <Button asChild size="lg" variant="outline" className="border-2 font-semibold text-lg px-8 py-6 hover:bg-primary/5">
+            <Button asChild size="lg" variant="outline" className="border-2 font-semibold text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 hover:bg-primary/5">
               <a href="#diensten">Bekijk diensten</a>
             </Button>
           </div>
