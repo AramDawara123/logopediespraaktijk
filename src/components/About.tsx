@@ -46,7 +46,7 @@ export const About = () => {
             </div>
             
             {/* Floating Stats */}
-            <div className="absolute -bottom-6 -right-2 mr-4 sm:mr-0 sm:-bottom-8 sm:-right-8 bg-card p-4 sm:p-6 rounded-xl shadow-xl border border-primary/20 animate-float">
+            <div className="absolute -bottom-6 -right-2 mr-4 md:mr-0 sm:-bottom-8 sm:-right-8 bg-card p-4 sm:p-6 rounded-xl shadow-xl border border-primary/20 animate-float">
               <div className="text-center">
                 <div className="text-3xl sm:text-4xl font-bold text-primary mb-1">95%</div>
                 <div className="text-xs sm:text-sm text-muted-foreground">Tevredenheid</div>
